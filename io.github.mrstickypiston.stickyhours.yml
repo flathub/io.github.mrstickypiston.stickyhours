@@ -10,7 +10,6 @@ finish-args:
   - --share=ipc
   - --share=network
   - --device=dri
-  - --socket=pulseaudio
   - --socket=wayland
   - --socket=fallback-x11
 modules:
@@ -31,5 +30,5 @@ modules:
       - cp --archive app/ /app/briefcase/app
     sources:
       - type: archive
-        url: https://github.com/MrStickyPiston/StickyHours/releases/download/1.0.4/StickyHours-Flatpak-src.zip
-        sha256: 34ccfb48bb3b3c06754d007d0ca59ec72d0c22686ae89fe92cff49a4773c6635
+        url: https://github.com/MrStickyPiston/StickyHours/releases/download/1.0.5/StickyHours-Flatpak-src.zip
+        sha256: 4055dd8b4e265b42baea585a7ed477a5056d282f6c97251016228dc389127fea
