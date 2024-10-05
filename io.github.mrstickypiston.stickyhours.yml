@@ -30,5 +30,5 @@ modules:
       - cp --archive app/ /app/briefcase/app
     sources:
       - type: archive
-        url: https://github.com/MrStickyPiston/StickyHours/releases/download/1.0.6/StickyHours-Flatpak-src.zip
-        sha256: 12b72b2c12fc533fced3e48ba5a747c5b7353bab457db5d55129b388d3358695
+        url: https://github.com/MrStickyPiston/StickyHours/releases/download/1.1.0/StickyHours-Flatpak-src.zip
+        sha256: af84d77f861c1db8d67b068589ded92ad39107829f109b8073d1b72920c338d0
