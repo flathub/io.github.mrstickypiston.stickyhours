@@ -31,4 +31,4 @@ modules:
     sources:
       - type: archive
         url: https://github.com/MrStickyPiston/StickyHours/releases/download/1.1.2/StickyHours-Flatpak-src.zip
-        sha256: 5d85a6e92ba0a8018fd2e99040297bec1d29e971a64ac4882191181859ea8c27
+        sha256: e77ab0209cd8c5dfdc6abecc63e94615cdaa9c7d411f9157c3b72f64e05ce1d9
