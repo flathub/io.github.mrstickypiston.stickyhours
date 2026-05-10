@@ -1,0 +1,67 @@
+From 9cbc14b4e279acf82a35b26824c80c15643ec9e4 Mon Sep 17 00:00:00 2001
+From: Sabri Ünal <yakushabb@gmail.com>
+Date: Mon, 11 May 2026 00:17:30 +0300
+Subject: [PATCH] Update Python version to 3.13
+
+Signed-off-by: Sabri Ünal <yakushabb@gmail.com>
+---
+ Makefile | 2 +-
+ main.c   | 8 ++++----
+ 2 files changed, 5 insertions(+), 5 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index 85545fd..c8935d8 100644
+--- a/Makefile
++++ b/Makefile
+@@ -5,7 +5,7 @@ LDFLAGS=$(shell python3-config --ldflags)
+ all: stickyhours
+ 
+ stickyhours: main.c
+-	gcc -o stickyhours $^ $(CFLAGS) $(LDFLAGS) -lpython3.12
++	gcc -o stickyhours $^ $(CFLAGS) $(LDFLAGS) -lpython3.13
+ 
+ clean:
+ 	rm -f stickyhours
+diff --git a/main.c b/main.c
+index 9eb84e8..3843560 100644
+--- a/main.c
++++ b/main.c
+@@ -117,7 +117,7 @@ int main(int argc, char *argv[]) {
+     PyMem_RawFree(wtmp_str);
+ 
+     // The unpacked form of the stdlib
+-    path = "/usr/lib/python3.12";
++    path = "/usr/lib/python3.13";
+     debug_log("- %s\n", path);
+     wtmp_str = Py_DecodeLocale(path, NULL);
+     status = PyWideStringList_Append(&config.module_search_paths, wtmp_str);
+@@ -129,7 +129,7 @@ int main(int argc, char *argv[]) {
+     PyMem_RawFree(wtmp_str);
+ 
+     // Add the stdlib binary modules path
+-    path = "/usr/lib/python3.12/lib-dynload";
++    path = "/usr/lib/python3.13/lib-dynload";
+     debug_log("- %s\n", path);
+     wtmp_str = Py_DecodeLocale(path, NULL);
+     status = PyWideStringList_Append(&config.module_search_paths, wtmp_str);
+@@ -141,7 +141,7 @@ int main(int argc, char *argv[]) {
+     PyMem_RawFree(wtmp_str);
+ 
+     // Add the app_packages path
+-    path = "/usr/lib/python3.12/site-packages";
++    path = "/usr/lib/python3.13/site-packages";
+     debug_log("- %s\n", path);
+     wtmp_str = Py_DecodeLocale(path, NULL);
+     status = PyWideStringList_Append(&config.module_search_paths, wtmp_str);
+@@ -153,7 +153,7 @@ int main(int argc, char *argv[]) {
+     PyMem_RawFree(wtmp_str);
+ 
+     // Add the app_packages path
+-    path = "/app/lib/python3.12/site-packages";
++    path = "/app/lib/python3.13/site-packages";
+     debug_log("- %s\n", path);
+     wtmp_str = Py_DecodeLocale(path, NULL);
+     status = PyWideStringList_Append(&config.module_search_paths, wtmp_str);
+--
+libgit2 1.7.2
+
