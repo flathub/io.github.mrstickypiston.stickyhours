@@ -1,6 +1,6 @@
 app-id: io.github.mrstickypiston.stickyhours
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 command: stickyhours
 cleanup:
@@ -20,7 +20,7 @@ modules:
     no-autogen: true
     post-install:
       # App resources
-      - install -D io.github.mrstickypiston.stickyhours.desktop /app/share/applications/io.github.mrstickypiston.stickyhours.desktop
+      - install -Dm644 io.github.mrstickypiston.stickyhours.desktop -t /app/share/applications/
       - mkdir -p /app/share/icons/hicolor
       - cp --archive hicolor /app/share/icons
       - install -Dm644 io.github.mrstickypiston.stickyhours.metainfo.xml -t /app/share/metainfo/
@@ -32,3 +32,5 @@ modules:
       - type: archive
         url: https://github.com/MrStickyPiston/StickyHours/releases/download/1.1.2/StickyHours-Flatpak-src.zip
         sha256: e77ab0209cd8c5dfdc6abecc63e94615cdaa9c7d411f9157c3b72f64e05ce1d9
+      - type: patch
+        path: fix-python-version.patch
