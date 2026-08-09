@@ -30,7 +30,7 @@ modules:
       - cp --archive app/ /app/briefcase/app
     sources:
       - type: archive
-        url: https://github.com/MrStickyPiston/StickyHours/releases/download/1.1.2/StickyHours-Flatpak-src.zip
-        sha256: e77ab0209cd8c5dfdc6abecc63e94615cdaa9c7d411f9157c3b72f64e05ce1d9
+        url: https://codeberg.org/MrStickyPiston/StickyHours/releases/download/1.1.4/StickyHours-Flatpak-src.zip
+        sha256: f40a64cf700fe9362d38a79aaf384223ff6cdd74b4a3faf85df62f6dc4513018
       - type: patch
         path: fix-python-version.patch
